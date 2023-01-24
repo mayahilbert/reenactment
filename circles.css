@@ -26,8 +26,6 @@
 }
 
 .deg-45 {
-  width: 110px;
-  height: 110px;
   transform: rotate(46deg) translate(251px) rotate(-46deg);
 }
 
