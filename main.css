@@ -259,16 +259,18 @@ nav {
   z-index: 1;
 }
 nav p {
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+
   font-size: 1.2vw;
 }
 a {
   color: white;
   text-decoration: none;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
   opacity: 0.8;
   transition: 0.5s;
+  color: #bfa485;
 }
 a:hover {
   opacity: 1;
@@ -327,10 +329,13 @@ a:hover {
 }
 .footer-home .exhibition-title {
   padding: 0;
+  color: #bfa485;
 }
 .footer-home p {
-  font-size: 1.2vw;
+  font-size: 1vw;
   margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 @media only screen and (max-width: 580px) {
