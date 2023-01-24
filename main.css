@@ -19,6 +19,10 @@ html {
   align-items: center;
   height: 100vh; */
 }
+
+.exhibition-title-wrapper .exhibition-title {
+  margin-left: 10vw;
+}
 .centerBlock-content {
   display: flex;
   justify-content: center;
@@ -45,7 +49,7 @@ html {
 }
 .exhibition-title h1,
 .exhibition-title h2 {
-  font-size: 1.3vw;
+  font-size: 1.1vw;
 }
 .centerBlock p {
   font-size: 0.4vw;
@@ -260,8 +264,14 @@ nav p {
 a {
   color: white;
   text-decoration: none;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+a:hover {
+  opacity: 1;
 }
 
 .scroll-line {
@@ -332,8 +342,13 @@ a {
     font-size: 1.5vw;
   }
 
-  .exhibition-title {
+  .exhibition-title-wrapper .exhibition-title {
+    margin-left: 0;
     padding-bottom: 13vh;
+  }
+  .exhibition-title h2.second-line {
+    margin: 0;
+    padding: 0;
   }
   .centerBlock p {
     font-size: 1.3vw;
