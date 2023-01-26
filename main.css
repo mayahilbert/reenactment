@@ -193,14 +193,14 @@ html {
   top: 45vh;
   width: 10vw;
   height: 10vw;
-  background-image: url("images/wormholes.jpg");
+  background-image: url("images/net.jpg");
 }
 .gridLayer:nth-child(9) .gridBlock {
   top: 65vh;
   left: 45vw;
   width: 10vw;
   height: 10vw;
-  background-image: url("images/net.jpg");
+  background-image: url("images/wormholes.jpg");
 }
 .gridLayer:nth-child(4) .gridBlock {
   top: 45vh;
