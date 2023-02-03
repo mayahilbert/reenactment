@@ -61,7 +61,7 @@ html {
 .vid-container iframe {
   height: 70vh;
   width: 75vw;
-  /* margin-bottom: 5vh; */
+  margin-bottom: 5vh;
 }
 
 .vid-container {
@@ -236,7 +236,7 @@ html {
 }
 
 .gridLayer:nth-child(7) .gridBlock {
-  top: 63vh;
+  top: 62vh;
   left: 34vw;
   width: 8vw;
   height: 8vw;
@@ -458,15 +458,14 @@ a:hover {
 }
 
 .overlay {
-  /* visibility: hidden; */
-  display: none;
+  /* display: none; */
   background-color: white;
   z-index: 100;
   position: fixed;
   inset: 0;
 }
 
-[aria-hidden="true"] {
+/* [aria-hidden="true"] {
   transition: opacity 1s, z-index 0s 1s;
   width: 100vw;
   z-index: -1;
@@ -478,15 +477,12 @@ a:hover {
   width: 100%;
   z-index: 1;
   opacity: 1;
-}
+} */
 
 body.overlay-on,
 html.overlay-on {
   overflow: hidden;
 }
-/* body.overlay-on .main-container {
-  display: none;
-} */
 
 .work-wrapper {
   display: flex;
@@ -497,17 +493,17 @@ html.overlay-on {
 }
 .work {
   padding: 3em 0;
-  /* opacity: 0; */
-  /* transition: 1s; */
+  opacity: 0;
+  transition: 1s;
   /* height: 100vh;
   position: relative; */
   /* position: absolute;
   top: 0;
   left: 0; */
 }
-/* .work.active {
+.work.active {
   opacity: 1;
-} */
+}
 .work img {
   max-width: 100vw;
   max-height: 90vh;
@@ -554,7 +550,7 @@ html.overlay-on {
   /* margin-top: -2.5rem; */
 }
 
-.work > * {
+.work * {
   /* position: absolute;
   top: 0;
   left: 0;
