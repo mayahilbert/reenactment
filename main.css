@@ -496,7 +496,10 @@ html.overlay-on {
   /* gap: 4em; */
 }
 .work {
-  padding: 3em 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  /* padding: 3em 0; */
   /* opacity: 0; */
   /* transition: 1s; */
   /* height: 100vh;
