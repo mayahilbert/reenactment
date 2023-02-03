@@ -498,7 +498,12 @@ html.overlay-on {
 .work {
   min-height: 100vh;
   display: flex;
+  position: relative;
   align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  color: black;
   /* padding: 3em 0; */
   /* opacity: 0; */
   /* transition: 1s; */
@@ -508,12 +513,21 @@ html.overlay-on {
   top: 0;
   left: 0; */
 }
+.work .caption {
+  padding: 3em;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 0.9em;
+  letter-spacing: 3px;
+}
 /* .work.active {
   opacity: 1;
 } */
 .work img {
   max-width: 100vw;
-  max-height: 90vh;
+  max-height: 85vh;
 }
 .work-overlay-wrapper {
   display: flex;
