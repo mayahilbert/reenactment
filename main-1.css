@@ -20,7 +20,7 @@ img {
 }
 
 ::-webkit-scrollbar {
-  background: transparent; /* Optional: just make scrollbar invisible */
+  /* background: transparent;  */
 }
 /* * {
   scrollbar-width: none;
