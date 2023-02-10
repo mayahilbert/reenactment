@@ -42,7 +42,7 @@ let sections = gsap.utils.toArray("section"),
 gsap.defaults({ overwrite: "auto" });
 
 // stretch out the body height according to however many sections there are.
-gsap.set("body", { height: sections.length * 70 + "%" });
+gsap.set("body", { height: sections.length * 67 + "%" });
 
 // create a ScrollTrigger for each section
 sections.forEach((section, i) => {
