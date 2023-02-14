@@ -31,6 +31,7 @@ var overlayTrigger;
 var overlayContainer = $("#overlay-project");
 let overlaySnaps = [];
 let overlaySections = [],
+  overlayLoop,
   sections = gsap.utils.toArray(".work"),
   currentSection = sections[0];
 gsap
@@ -170,7 +171,7 @@ gridCircles.forEach((el, i) =>
       }
     }
     // handles the infinite part, wrapping around at either end....
-    ScrollTrigger.create({
+    overlayLoop = ScrollTrigger.create({
       id: "overlay-loop",
       start: 1,
       end: () => ScrollTrigger.maxScroll(window) - 1,
@@ -190,7 +191,7 @@ $(document).on("click", function () {
     overlaySnaps.forEach((overlaySnap) => overlaySnap.kill());
     overlaySections = [];
     overlaySnaps = [];
-    // overlayLoop.kill();
+    ScrollTrigger.getById("overlay-loop").kill();
   }
   vidContainers.forEach((el) => {
     pauseVideo(el);
