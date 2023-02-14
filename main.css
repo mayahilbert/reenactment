@@ -2,10 +2,14 @@ html {
   background: black;
   color: white;
   font-family: "Jost";
+  height: 100%;
   font-weight: 300;
   overflow-x: hidden;
-  scroll-behavior: smooth;
   /* background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuZGV2L3N2Z2pzIiB2aWV3Qm94PSIwIDAgNzAwIDcwMCIgd2lkdGg9IjcwMCIgaGVpZ2h0PSI3MDAiIG9wYWNpdHk9IjAuMjUiPjxkZWZzPjxmaWx0ZXIgaWQ9Im5ubm9pc2UtZmlsdGVyIiB4PSItMjAlIiB5PSItMjAlIiB3aWR0aD0iMTQwJSIgaGVpZ2h0PSIxNDAlIiBmaWx0ZXJVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHByaW1pdGl2ZVVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzPSJsaW5lYXJSR0IiPgoJPGZlVHVyYnVsZW5jZSB0eXBlPSJ0dXJidWxlbmNlIiBiYXNlRnJlcXVlbmN5PSIwLjE1NiIgbnVtT2N0YXZlcz0iNCIgc2VlZD0iMTUiIHN0aXRjaFRpbGVzPSJzdGl0Y2giIHg9IjAlIiB5PSIwJSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgcmVzdWx0PSJ0dXJidWxlbmNlIj48L2ZlVHVyYnVsZW5jZT4KCTxmZVNwZWN1bGFyTGlnaHRpbmcgc3VyZmFjZVNjYWxlPSIyIiBzcGVjdWxhckNvbnN0YW50PSIwLjUiIHNwZWN1bGFyRXhwb25lbnQ9IjIwIiBsaWdodGluZy1jb2xvcj0iI2M3YTY4OSIgeD0iMCUiIHk9IjAlIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBpbj0idHVyYnVsZW5jZSIgcmVzdWx0PSJzcGVjdWxhckxpZ2h0aW5nIj4KICAgIAkJPGZlRGlzdGFudExpZ2h0IGF6aW11dGg9IjMiIGVsZXZhdGlvbj0iMTAwIj48L2ZlRGlzdGFudExpZ2h0PgogIAk8L2ZlU3BlY3VsYXJMaWdodGluZz4KICAKPC9maWx0ZXI+PC9kZWZzPjxyZWN0IHdpZHRoPSI3MDAiIGhlaWdodD0iNzAwIiBmaWxsPSIjMGMwYTBhZmYiPjwvcmVjdD48cmVjdCB3aWR0aD0iNzAwIiBoZWlnaHQ9IjcwMCIgZmlsbD0iI2M3YTY4OSIgZmlsdGVyPSJ1cmwoI25ubm9pc2UtZmlsdGVyKSI+PC9yZWN0Pjwvc3ZnPg=="); */
+}
+
+body {
+  height: 100%;
 }
 
 .exhibition-title-wrapper {
@@ -185,7 +189,7 @@ html {
   z-index: -5;
 }
 
-.gridLayer:nth-child(3) .gridBlock {
+.gridLayer:nth-child(2) .gridBlock {
   top: 18vh;
   left: 45vw;
   width: 10vw;
@@ -193,7 +197,7 @@ html {
   background-image: url("images/whatwecame.jpg");
 }
 
-.gridLayer:nth-child(6) .gridBlock {
+.gridLayer:nth-child(4) .gridBlock {
   left: 65vw;
   top: 45vh;
   width: 10vw;
@@ -207,7 +211,7 @@ html {
   height: 10vw;
   background-image: url("images/wormholes.jpg");
 }
-.gridLayer:nth-child(4) .gridBlock {
+.gridLayer:nth-child(6) .gridBlock {
   top: 45vh;
   left: 24vw;
   width: 10vw;
@@ -215,7 +219,7 @@ html {
   background-image: url("images/third.jpg");
 }
 
-.gridLayer:nth-child(2) .gridBlock {
+.gridLayer:nth-child(7) .gridBlock {
   top: 28vh;
   left: 34vw;
   width: 8vw;
@@ -225,7 +229,7 @@ html {
   background-position: center;
 }
 
-.gridLayer:nth-child(5) .gridBlock {
+.gridLayer:nth-child(3) .gridBlock {
   top: 28vh;
   left: 58vw;
   width: 8vw;
@@ -235,7 +239,7 @@ html {
   background-position: center;
 }
 
-.gridLayer:nth-child(7) .gridBlock {
+.gridLayer:nth-child(8) .gridBlock {
   top: 63vh;
   left: 34vw;
   width: 8vw;
@@ -245,7 +249,7 @@ html {
   background-position: center;
 }
 
-.gridLayer:nth-child(8) .gridBlock {
+.gridLayer:nth-child(5) .gridBlock {
   top: 63vh;
   left: 58vw;
   width: 8vw;
@@ -465,7 +469,7 @@ a:hover {
   position: fixed;
   inset: 0;
 }
-
+/* 
 [aria-hidden="true"] {
   transition: opacity 1s, z-index 0s 1s;
   width: 100vw;
@@ -478,15 +482,17 @@ a:hover {
   width: 100%;
   z-index: 1;
   opacity: 1;
-}
+} */
 
 body.overlay-on,
 html.overlay-on {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
-/* body.overlay-on .main-container {
+body.overlay-on .main-container {
+  overflow: hidden;
+
   display: none;
-} */
+}
 
 .work-wrapper {
   display: flex;
@@ -496,14 +502,14 @@ html.overlay-on {
   /* gap: 4em; */
 }
 .work {
-  min-height: 100vh;
+  /* min-height: 100vh;
   display: flex;
   position: relative;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   width: 100vw;
-  color: black;
+  color: black; */
   /* padding: 3em 0; */
   /* opacity: 0; */
   /* transition: 1s; */
@@ -534,17 +540,18 @@ html.overlay-on {
   flex-direction: column;
   align-items: center;
 
-  overflow-y: scroll;
-  overflow-x: hidden;
+  /* overflow-y: scroll;
+  overflow-x: hidden; */
 
-  height: 100%;
-  width: auto;
-  scroll-snap-type: y mandatory;
-  overscroll-behavior-y: contain;
+  /* height: 100%;
+  width: auto; */
+  /* scroll-snap-type: y mandatory;
+  overscroll-behavior-y: contain; */
   /* gap: 5em; */
 }
 .work {
-  scroll-snap-align: center;
+  color: black;
+  /* scroll-snap-align: center; */
 }
 
 .close-wrapper {
@@ -578,3 +585,25 @@ html.overlay-on {
   width: 100%;
   height: 100vh; */
 }
+.work {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+}
+
+.work {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1);
+}
+/* ::-webkit-scrollbar {
+  background: transparent; 
+}
+* {
+  scrollbar-width: none;
+} */
