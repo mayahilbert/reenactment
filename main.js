@@ -83,12 +83,12 @@ gridCircles.forEach((el, i) =>
 
     gsap.defaults({ overwrite: "auto" });
     // gsap.set(".main-container", { height: "0px" });
-    $("html,body").animate(
-      {
-        scrollTop: 500,
-      },
-      "500"
-    );
+    // $("html,body").animate({
+    //   scrollTop: 400,
+    // });
+    gsap.to($(".centerPiece"), { autoAlpha: 0, duration: 0 });
+
+    $(".main-container").fadeOut();
 
     gsap.set("body", { height: sections.length * 100 + "%" });
 
@@ -135,13 +135,20 @@ gridCircles.forEach((el, i) =>
     sectionScrollsCreated.then(() => {
       console.log("All done!");
       setTimeout(function () {
-        //your code to be executed after 1 second
-        gsap.to(window, {
-          duration: 0,
-          scrollTo: currentSectionIndex * window.innerHeight,
-          overwrite: true,
-        });
         setSection(sections[currentSectionIndex]);
+        if (currentSectionIndex === 0) {
+          gsap.to(window, {
+            duration: 0,
+            scrollTo: "10",
+            overwrite: true,
+          });
+        } else {
+          gsap.to(window, {
+            duration: 0,
+            scrollTo: currentSectionIndex * window.innerHeight,
+            overwrite: true,
+          });
+        }
 
         console.log(
           "currentSectionIndex: " +
@@ -151,19 +158,21 @@ gridCircles.forEach((el, i) =>
             " scrollTo " +
             currentSectionIndex * window.innerHeight
         );
-        $("html, body").addClass("overlay-on");
+        setTimeout(function () {
+          $("#overlay-project").fadeIn();
+        }, 400);
 
-        $("#overlay-project").fadeIn();
-      }, 500);
+        // $("html, body").addClass("overlay-on");
+      }, 300);
     });
 
     function setSection(newSection) {
       if (newSection !== currentSection) {
-        gsap.to(currentSection, { autoAlpha: 0, duration: 0.7 });
-        gsap.to(currentSection, { scale: 1.7, duration: 0.7 });
-        gsap.to(currentSection, { scale: 1, delay: 0.9 });
-        gsap.from(newSection, { scale: 0.6, duration: 0.7 });
-        gsap.to(newSection, { autoAlpha: 1, duration: 0.7 });
+        gsap.to(currentSection, { autoAlpha: 0, duration: 1 });
+        gsap.to(currentSection, { scale: 1.7, duration: 1 });
+        gsap.to(currentSection, { scale: 1, delay: 1 });
+        gsap.from(newSection, { scale: 0.6, duration: 1.3 });
+        gsap.to(newSection, { autoAlpha: 1, duration: 1.3 });
         console.log(
           "setting section: " + currentSection.id + " to " + newSection.id
         );
@@ -198,6 +207,10 @@ $(document).on("click", function () {
   });
 
   $("#overlay-project").fadeOut();
+  gsap.to($(".centerPiece"), { autoAlpha: 1, duration: 0 });
+
+  $(".main-container").fadeIn();
+
   gsap.to(currentSection, { autoAlpha: 0 });
   gsap.to(currentSection, { scale: 0.6 });
   // $("#overlay-project").css("visibility", "hidden");
