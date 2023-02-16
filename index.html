@@ -14,9 +14,15 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="main.css" />
+    <noscript>
+      <link href="nojs.css" type="text/css" rel="stylesheet" />
+    </noscript>
     <script></script>
   </head>
-  <body>
+  <body class="animate-in">
+    <div class="no-js">
+      Please enable JavaScript to experience this website.
+    </div>
     <div class="main-container">
       <nav>
         <p>
@@ -30,7 +36,7 @@
       <div id="container-drag" class="container-drag">
         <div class="grid-container">
           <div class="grid">
-            <div class="gridLayer centerPiece">
+            <div class="gridLayer gridLayer-1 centerPiece">
               <div class="gridBlock centerBlock">
                 <div class="centerBlock-content">
                   <div id="scrollIndicator">
@@ -50,7 +56,7 @@
                 </div>
               </div>
             </div>
-            <div class="gridLayer">
+            <div class="gridLayer gridLayer-2">
               <div class="gridBlock">
                 <a
                   class="gridLink"
@@ -58,7 +64,7 @@
                 ></a>
               </div>
             </div>
-            <div class="gridLayer">
+            <div class="gridLayer gridLayer-3">
               <div class="gridBlock">
                 <a
                   class="gridLink"
@@ -66,30 +72,37 @@
                 ></a>
               </div>
             </div>
-            <div class="gridLayer">
+            <div class="gridLayer gridLayer-4">
               <div class="gridBlock">
                 <a class="gridLink" data-scroll-target="#nothing-but-net-1"></a>
               </div>
             </div>
-            <div class="gridLayer">
+            <div class="gridLayer gridLayer-5">
               <div class="gridBlock">
                 <a class="gridLink" data-scroll-target="#nothing-but-net-2"></a>
               </div>
             </div>
-            <div class="gridLayer">
-              <div class="gridBlock"><a></a></div>
+            <div class="gridLayer gridLayer-6">
+              <div class="gridBlock">
+                <a class="gridLink" data-scroll-target="#wormholes-1"></a>
+              </div>
+            </div>
+            <div class="gridLayer gridLayer-7">
+              <div class="gridBlock">
+                <a class="gridLink" data-scroll-target="#wormholes-2"></a>
+              </div>
             </div>
 
-            <div class="gridLayer">
-              <div class="gridBlock"><a></a></div>
+            <div class="gridLayer gridLayer-8">
+              <div class="gridBlock">
+                <a class="gridLink" data-scroll-target="#a-third-space-1"></a>
+              </div>
             </div>
 
-            <div class="gridLayer">
-              <div class="gridBlock"><a></a></div>
-            </div>
-
-            <div class="gridLayer">
-              <div class="gridBlock"><a></a></div>
+            <div class="gridLayer gridLayer-9">
+              <div class="gridBlock">
+                <a class="gridLink" data-scroll-target="#a-third-space-2"></a>
+              </div>
             </div>
           </div>
         </div>
@@ -176,6 +189,61 @@
           <img class="work-inner" src="images/nbn-4.jpg" />
           <p class="caption">4/4</p>
         </div>
+
+        <div class="work" id="wormholes-1">
+          <div class="vid-container work-inner">
+            <div class="playbutton">
+              <div class="playbutton-icon"></div>
+            </div>
+            <iframe
+              src="https://player.vimeo.com/video/790235172?h=806ac51f6f&title=0&byline=0&portrait=0&api=1"
+              frameborder="0"
+              allow="autoplay; fullscreen"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="work" id="wormholes-2">
+          <img class="work-inner" src="images/w-1.jpg" />
+          <p class="caption">1/4</p>
+        </div>
+        <div class="work">
+          <img class="work-inner" src="images/w-2.jpg" />
+          <p class="caption">2/4</p>
+        </div>
+        <div class="work">
+          <img class="work-inner" src="images/w-3.jpg" />
+          <p class="caption">3/4</p>
+        </div>
+        <div class="work">
+          <img class="work-inner" src="images/w-4.jpg" />
+          <p class="caption">4/4</p>
+        </div>
+
+        <div class="work" id="a-third-space-1">
+          <div class="vid-container work-inner">
+            <div class="playbutton">
+              <div class="playbutton-icon"></div>
+            </div>
+            <iframe
+              src="https://player.vimeo.com/video/790236322?h=c0a90b6b9d&title=0&byline=0&portrait=0&api=1"
+              frameborder="0"
+              allow="autoplay; fullscreen"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="work" id="a-third-space-2">
+          <img class="work-inner" src="images/ats-1.jpg" />
+          <p class="caption">1/2</p>
+        </div>
+        <div class="work">
+          <img class="work-inner" src="images/ats-2.jpg" />
+          <p class="caption">2/2</p>
+        </div>
+
         <!-- <div class="work">
           <div class="vid-container" id="wormholes-1">
             <div class="playbutton">

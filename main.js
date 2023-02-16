@@ -34,6 +34,8 @@ let overlaySections = [],
   overlayLoop,
   sections = gsap.utils.toArray(".work"),
   currentSection = sections[0];
+// Grab the prefers reduced media query.
+const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 gsap
   .timeline({
     scrollTrigger: {
@@ -54,7 +56,7 @@ gsap
     0
   )
 
-  .from(".gridLayer", { duration: 0.05, scale: 3, ease: "ease" }, 0);
+  .to(".gridLayer", { duration: 0.05, scale: 1, ease: "ease" }, 0);
 
 const scrollIndicator = document.getElementById("scrollIndicator");
 
@@ -128,6 +130,7 @@ gridCircles.forEach((el, i) =>
         //   });
         //   overlaySnaps.push(overlaySnap);
         // }
+
         if (i === sections.length - 1) resolve();
       });
     });
@@ -168,11 +171,32 @@ gridCircles.forEach((el, i) =>
 
     function setSection(newSection) {
       if (newSection !== currentSection) {
-        gsap.to(currentSection, { autoAlpha: 0, duration: 1 });
-        gsap.to(currentSection, { scale: 1.7, duration: 1 });
-        gsap.to(currentSection, { scale: 1, delay: 1 });
-        gsap.from(newSection, { scale: 0.6, duration: 1.3 });
-        gsap.to(newSection, { autoAlpha: 1, duration: 1.3 });
+        if (!mediaQuery || mediaQuery.matches) {
+          gsap.to(currentSection, { autoAlpha: 0, duration: 0 });
+          gsap.to(newSection, { autoAlpha: 1, duration: 0.5 });
+          gsap.to(newSection, { scale: 1, duration: 0 });
+        } else {
+          gsap.to(currentSection, { autoAlpha: 0, duration: 1 });
+          gsap.to(currentSection, { scale: 1.7, duration: 1 });
+          gsap.to(currentSection, { scale: 1, delay: 1 });
+          gsap.from(newSection, { scale: 0.6, duration: 1.3 });
+          gsap.to(newSection, { autoAlpha: 1, duration: 1.3 });
+        }
+
+        mediaQuery.addEventListener("change", () => {
+          if (mediaQuery.matches) {
+            gsap.to(currentSection, { autoAlpha: 0, duration: 0 });
+            gsap.to(newSection, { autoAlpha: 1, duration: 0.5 });
+            gsap.to(newSection, { scale: 1, duration: 0 });
+          } else {
+            gsap.to(currentSection, { autoAlpha: 0, duration: 1 });
+            gsap.to(currentSection, { scale: 1.7, duration: 1 });
+            gsap.to(currentSection, { scale: 1, delay: 1 });
+            gsap.from(newSection, { scale: 0.6, duration: 1.3 });
+            gsap.to(newSection, { autoAlpha: 1, duration: 1.3 });
+          }
+        });
+
         console.log(
           "setting section: " + currentSection.id + " to " + newSection.id
         );
