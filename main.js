@@ -255,7 +255,9 @@ $(document).on("click", function () {
 $(".work > *").on("click", function (event) {
   event.stopPropagation();
 });
-
+$("nav").on("click", function (event) {
+  event.stopPropagation();
+});
 // gsap
 //   .timeline({
 //     scrollTrigger: {
