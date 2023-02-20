@@ -437,6 +437,9 @@ margin-top: 5vh;
     padding-left: 5vw;
     margin-top: 18vh;
   }
+  .footer-home {
+    margin-top: -5vh;
+  }
   .grid {
     width: 95vw;
     height: 100%;
