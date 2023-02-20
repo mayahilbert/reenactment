@@ -431,6 +431,7 @@ margin-top: 5vh;
     font-size: 1.3vw;
   }
   #scrollIndicator {
+    padding-left: 5vw;
     padding-top: 9vh;
   }
   .grid {
