@@ -436,6 +436,7 @@ margin-top: 5vh;
   .grid {
     width: 90vw;
     height: 100%;
+    height: 90vh;
   }
   .gridLayer:nth-child(1) .gridBlock {
     width: 45vw;
