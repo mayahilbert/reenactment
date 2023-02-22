@@ -741,3 +741,10 @@ h3 {
   z-index: 5;
   bottom: 0;
 }
+
+#what-we-came-to-see-1,
+#nothing-but-net-1,
+#wormholes-1,
+#the-third-space-1 {
+  background-color: #bfa485;
+}
