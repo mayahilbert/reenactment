@@ -96,7 +96,6 @@ gridCircles.forEach((el, i) =>
         let overlaySection = ScrollTrigger.create({
           id: "overlay-section-" + i,
           // use dynamic scroll positions based on the window height (offset by half to make it feel natural)
-          pinned: true,
           start: () => (i - 0.5) * innerHeight,
           end: () => (i + 0.5) * innerHeight,
           // when a new section activates (from either direction), set the section accordingly.
@@ -105,6 +104,21 @@ gridCircles.forEach((el, i) =>
         overlaySections.push(overlaySection);
         console.log("overlaySections: ");
         console.log(overlaySections);
+        if (i > 0 && i < sections.length - 1) {
+          let overlaySnap = ScrollTrigger.create({
+            id: "overlay-snap-" + i,
+            start: () => (i - 0.5) * innerHeight,
+            end: () => (i + 0.5) * innerHeight,
+            snap: {
+              snapTo: 0.98,
+              duration: { min: 0, max: 0.01 },
+              delay: 0,
+              snapDirectional: (1, 1),
+              ease: "power1.inOut",
+            },
+          });
+          overlaySnaps.push(overlaySnap);
+        }
 
         if (i === sections.length - 1) resolve();
       });
