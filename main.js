@@ -157,8 +157,24 @@ gridCircles.forEach((el, i) =>
     });
 
     function setSection(newSection) {
-      if (newSection !== currentSection) {
-        if (!mediaQuery || mediaQuery.matches) {
+      console.log(
+        "setting section: " + currentSection.id + " to " + newSection.id
+      );
+      // if (newSection !== currentSection) {
+      if (!mediaQuery || mediaQuery.matches) {
+        gsap.to(currentSection, { autoAlpha: 0, duration: 0 });
+        gsap.to(newSection, { autoAlpha: 1, duration: 0.5 });
+        gsap.to(newSection, { scale: 1, duration: 0 });
+      } else {
+        gsap.to(currentSection, { autoAlpha: 0, duration: 1 });
+        gsap.to(currentSection, { scale: 1.7, duration: 1 });
+        gsap.to(currentSection, { scale: 1, delay: 1 });
+        gsap.from(newSection, { scale: 0.6, duration: 1.3 });
+        gsap.to(newSection, { autoAlpha: 1, duration: 1.3 });
+      }
+
+      mediaQuery.addEventListener("change", () => {
+        if (mediaQuery.matches) {
           gsap.to(currentSection, { autoAlpha: 0, duration: 0 });
           gsap.to(newSection, { autoAlpha: 1, duration: 0.5 });
           gsap.to(newSection, { scale: 1, duration: 0 });
@@ -169,30 +185,13 @@ gridCircles.forEach((el, i) =>
           gsap.from(newSection, { scale: 0.6, duration: 1.3 });
           gsap.to(newSection, { autoAlpha: 1, duration: 1.3 });
         }
+      });
 
-        mediaQuery.addEventListener("change", () => {
-          if (mediaQuery.matches) {
-            gsap.to(currentSection, { autoAlpha: 0, duration: 0 });
-            gsap.to(newSection, { autoAlpha: 1, duration: 0.5 });
-            gsap.to(newSection, { scale: 1, duration: 0 });
-          } else {
-            gsap.to(currentSection, { autoAlpha: 0, duration: 1 });
-            gsap.to(currentSection, { scale: 1.7, duration: 1 });
-            gsap.to(currentSection, { scale: 1, delay: 1 });
-            gsap.from(newSection, { scale: 0.6, duration: 1.3 });
-            gsap.to(newSection, { autoAlpha: 1, duration: 1.3 });
-          }
-        });
-
-        console.log(
-          "setting section: " + currentSection.id + " to " + newSection.id
-        );
-
-        currentSection = newSection;
-        vidContainers.forEach((el) => {
-          pauseVideo(el);
-        });
-      }
+      currentSection = newSection;
+      vidContainers.forEach((el) => {
+        pauseVideo(el);
+      });
+      // }
     }
     // handles the infinite part, wrapping around at either end....
     overlayLoop = ScrollTrigger.create({
