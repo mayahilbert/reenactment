@@ -554,6 +554,16 @@ body.overlay-on .main-container {
 .interview-wrapper > * > p > strong {
   font-weight: 500;
 }
+.interview-link {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 3em;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  font-size: 1.2vw;
+}
 .work > * {
   /* position: absolute;
   top: 0;
@@ -682,6 +692,10 @@ h3 {
   background-color: #bfa485;
 }
 @media only screen and (max-width: 580px) {
+  .interview-link {
+    position: relative;
+    font-size: 4vw;
+  }
   .play-symbol,
   .pic-symbol {
     opacity: 1;
