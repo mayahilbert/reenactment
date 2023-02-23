@@ -418,124 +418,6 @@ a:hover {
   letter-spacing: 0.1em;
 }
 
-@media only screen and (max-width: 580px) {
-  .centerBlock-content {
-    justify-content: space-between;
-  }
-  .exhibition-title h1,
-  .exhibition-title h2 {
-    font-size: 1.5vw;
-  }
-  .footer-home .exhibition-title h1,
-  .footer-home .exhibition-title h2 {
-    font-size: 3vw;
-  }
-  .footer-home p {
-    display: none;
-  }
-  .exhibition-title-wrapper .exhibition-title {
-    margin-left: 0;
-    padding-bottom: 5vh;
-  }
-  .exhibition-title h2.second-line {
-    margin: 0;
-    padding: 0;
-  }
-  .exhibition-title-wrapper {
-    padding-bottom: 3vh;
-  }
-  .centerBlock p {
-    font-size: 1.3vw;
-  }
-  #scrollIndicator {
-    padding-left: 5vw;
-    margin-top: 18vh;
-  }
-  .footer-home {
-    display: none;
-  }
-  .grid {
-    width: 95vw;
-    height: 100%;
-    height: 90vh;
-  }
-  .gridLayer {
-    height: 90%;
-    width: 90%;
-  }
-  .gridLayer:nth-child(1) .gridBlock {
-    width: 45vw;
-    height: 45vh;
-    pointer-events: none;
-    z-index: -5;
-    margin-right: 6vw;
-    /* border: 5px red solid; */
-  }
-
-  .gridLayer:nth-child(2) .gridBlock {
-    top: 18vh;
-    left: 37vw;
-    width: 20vw;
-    height: 20vw;
-  }
-
-  .gridLayer:nth-child(4) .gridBlock {
-    left: 59vw;
-    top: 44vh;
-    width: 20vw;
-    height: 20vw;
-  }
-  .gridLayer:nth-child(6) .gridBlock {
-    top: 66vh;
-    left: 37vw;
-    width: 20vw;
-    height: 20vw;
-  }
-  .gridLayer:nth-child(8) .gridBlock {
-    top: 44vh;
-    left: 15vw;
-    width: 20vw;
-    height: 20vw;
-  }
-
-  .gridLayer:nth-child(9) .gridBlock {
-    top: 31vh;
-    left: 22vw;
-    width: 14vw;
-    height: 14vw;
-  }
-
-  .gridLayer:nth-child(3) .gridBlock {
-    top: 31vh;
-    left: 56vw;
-    width: 14vw;
-    height: 14vw;
-  }
-
-  .gridLayer:nth-child(7) .gridBlock {
-    top: 60vh;
-    left: 22vw;
-    width: 14vw;
-    height: 14vw;
-  }
-
-  .gridLayer:nth-child(5) .gridBlock {
-    top: 60vh;
-    left: 59vw;
-    width: 14vw;
-    height: 14vw;
-  }
-  nav {
-    padding: 1em;
-  }
-  .non-home nav {
-    padding: 0 inherit;
-  }
-  nav p {
-    font-size: 3.5vw;
-  }
-}
-
 .overlay {
   /* visibility: hidden; */
   display: none;
@@ -765,4 +647,134 @@ h3 {
 #wormholes-1,
 #a-third-space-1 {
   background-color: #bfa485;
+}
+@media only screen and (max-width: 580px) {
+  .work .caption {
+    justify-content: space-between;
+    width: 70vw;
+    flex-direction: row-reverse;
+    right: auto;
+    padding: 0;
+  }
+  .scroll-line-p {
+    height: 5vh;
+  }
+  .work img {
+    max-height: 60vh;
+  }
+  .centerBlock-content {
+    justify-content: space-between;
+  }
+  .exhibition-title h1,
+  .exhibition-title h2 {
+    font-size: 1.5vw;
+  }
+  .footer-home .exhibition-title h1,
+  .footer-home .exhibition-title h2 {
+    font-size: 3vw;
+  }
+  .footer-home p {
+    display: none;
+  }
+  .exhibition-title-wrapper .exhibition-title {
+    margin-left: 0;
+    padding-bottom: 5vh;
+  }
+  .exhibition-title h2.second-line {
+    margin: 0;
+    padding: 0;
+  }
+  .exhibition-title-wrapper {
+    padding-bottom: 3vh;
+  }
+  .centerBlock p {
+    font-size: 1.3vw;
+  }
+  #scrollIndicator {
+    padding-left: 5vw;
+    margin-top: 18vh;
+  }
+  .footer-home {
+    display: none;
+  }
+  .grid {
+    width: 95vw;
+    height: 100%;
+    height: 90vh;
+  }
+  .gridLayer {
+    height: 90%;
+    width: 90%;
+  }
+  .gridLayer:nth-child(1) .gridBlock {
+    width: 45vw;
+    height: 45vh;
+    pointer-events: none;
+    z-index: -5;
+    margin-right: 6vw;
+    /* border: 5px red solid; */
+  }
+
+  .gridLayer:nth-child(2) .gridBlock {
+    top: 18vh;
+    left: 37vw;
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .gridLayer:nth-child(4) .gridBlock {
+    left: 59vw;
+    top: 44vh;
+    width: 20vw;
+    height: 20vw;
+  }
+  .gridLayer:nth-child(6) .gridBlock {
+    top: 66vh;
+    left: 37vw;
+    width: 20vw;
+    height: 20vw;
+  }
+  .gridLayer:nth-child(8) .gridBlock {
+    top: 44vh;
+    left: 15vw;
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .gridLayer:nth-child(9) .gridBlock {
+    top: 31vh;
+    left: 22vw;
+    width: 14vw;
+    height: 14vw;
+  }
+
+  .gridLayer:nth-child(3) .gridBlock {
+    top: 31vh;
+    left: 56vw;
+    width: 14vw;
+    height: 14vw;
+  }
+
+  .gridLayer:nth-child(7) .gridBlock {
+    top: 60vh;
+    left: 22vw;
+    width: 14vw;
+    height: 14vw;
+  }
+
+  .gridLayer:nth-child(5) .gridBlock {
+    top: 60vh;
+    left: 59vw;
+    width: 14vw;
+    height: 14vw;
+  }
+  nav {
+    padding: 1em;
+  }
+  .non-home nav {
+    padding: 0 inherit;
+  }
+  nav p {
+    font-size: 3.5vw;
+  }
 }
