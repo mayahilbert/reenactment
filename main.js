@@ -187,6 +187,7 @@ gridCircles.forEach((el, i) =>
         console.log(
           "setting section: " + currentSection.id + " to " + newSection.id
         );
+
         currentSection = newSection;
         vidContainers.forEach((el) => {
           pauseVideo(el);
