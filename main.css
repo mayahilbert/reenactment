@@ -551,7 +551,9 @@ body.overlay-on .main-container {
   margin: 0;
   /* margin-top: -2.5rem; */
 }
-
+.interview-wrapper > * > p > strong {
+  font-weight: 500;
+}
 .work > * {
   /* position: absolute;
   top: 0;
