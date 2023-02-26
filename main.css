@@ -692,6 +692,19 @@ h3 {
   background-color: #bfa485;
 }
 @media only screen and (max-width: 580px) {
+  .map-fill-l,
+  .map-fill-d-m {
+    fill: #806c54;
+  }
+  .map-fill-d,
+  .map-fill-l-m {
+    fill: #514331;
+  }
+  .caption svg {
+    transform: rotate(90deg);
+    max-width: 16vw;
+    padding-right: 10vh;
+  }
   .interview-link {
     position: relative;
     font-size: 4vw;
@@ -710,11 +723,14 @@ h3 {
   }
 
   .work .caption {
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 70vw;
     flex-direction: row-reverse;
-    right: auto;
+    /* right: auto; */
     padding: 0;
+  }
+  .numbering {
+    margin-left: -5vw;
   }
   .scroll-line-p {
     height: 5vh;
