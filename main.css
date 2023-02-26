@@ -683,6 +683,7 @@ h3 {
   position: fixed;
   z-index: 5;
   bottom: 0;
+  pointer-events: none;
 }
 
 #what-we-came-to-see-1,
